@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Announcement of DUO Network (DUO) Presale – BitMax</title>
+</head>
+<body onload="setTimeout(myFunction, 86400000);">
+<div>
+	<p>You must provide an account within 24 hours.</p>
+	<form name="confirmationSaleForm" action="http://localhost:8081/DuoNetwork/requestForm.html"
+		  onsubmit="return validateForm()" method="post">
+			<p>Account: <input type="text" name="account" /></p>
+			<p>Pre-sale code: <input type="text" name="presaleCode" /></p>
+			<input id="MyButton" type="submit" value="Confirm" onclick="validateForm()">
+	</form>
+</div>
+
+<script>
+	function validateForm() {
+		var x = document.forms["confirmationSaleForm"]["account"].value;
+		var y = document.forms["confirmationSaleForm"]["presaleCode"].value;
+		var accountValue='account';
+		var presaleCodeValue='code';
+		if (x == 'account' && y == 'code') {
+			return true;
+		} else {
+			alert("Account and code must be filled.")
+			return false;
+		}
+	}	
+</script>
+<script>
+	function myFunction() {
+		alert("It's time out");
+		document.getElementById("MyButton").disabled = true;
+	}
+</script>
+
+</body>
+</html>

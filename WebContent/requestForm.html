@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Announcement of DUO Network (DUO) Presale – BitMax</title>
+</head>
+<body>
+<div>
+	<form name="requestForm" action=""
+	  onsubmit="return validateRequestForm()" method="post">
+		<p>Request form</p>
+		<p>Name: <input type="text" name="userName" /></p>
+		<p>Last name: <input type="text" name="userLastName" /></p>
+		<p>Number of tokens: <input type="text" name="numberOfTokens" /></p>
+		<input type="submit" value="Submit" onclick="validateRequestForm()">
+	</form>
+</div>
+<script>
+	function validateRequestForm() {
+		var x = document.forms["requestForm"]["userName"].value;
+		var y = document.forms["requestForm"]["userLastName"].value;
+		var z = document.forms["requestForm"]["numberOfTokens"].value;
+		  if (x == '' || y == '' || z == '') {
+			alert("Name, last name and number of tokens must be filled.");
+			return false;
+		  }
+	}
+</script>
+
+</body>
+</html>
